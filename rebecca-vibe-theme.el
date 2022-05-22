@@ -22,7 +22,7 @@
 ;; Atom Gloom: https://atom.io/packages/gloom
 
 
-(deftheme rebecca "A purple, dark theme.")
+(deftheme rebecca-vibe "A purple, dark theme. (color adjusted).")
 
 (let* ((class '((class color) (min-colors 89)))
        (rebecca "#663399")
@@ -43,7 +43,7 @@
        (base0C (if (display-graphic-p) "#8eaee0" "#87afd7")) ;; regex, escaped chars
        (base0D (if (display-graphic-p) "#2de0a7" "#5fd7af")) ;; functions
        (base0E (if (display-graphic-p) "#7aa5ff" "#5fafff")) ;; keywords
-       (base0F (if (display-graphic-p) "#ff79c6" "#ff5faf")) ;; deprecations
+       (base0F (if (display-graphic-p) "#ff79c6" "#ff5faf")) ;; deprecations       
 
        (fg1  base05)
        (fg2  base06)
@@ -63,10 +63,10 @@
        (const   base09)
        (comment base03)
        (func    base0D)
-       (str     base0B)
+       (str     base0F) ;; (str     base0B)
        (type    base0A)
-       (var     base08)
-       (warning base0F)
+       (var     base09) ;; (var     base08)
+       (warning base0A) ;; (warning base0F)
 
        (rainbow-1 base03)
        (rainbow-2 base08)
@@ -86,7 +86,7 @@
        )
 
   (custom-theme-set-faces
-   'rebecca
+   'rebecca-vibe
    ;; default
    `(cursor ((,class (:background ,fg3))))
    `(default ((,class (:background ,bg1 :foreground ,fg1))))
@@ -495,7 +495,7 @@
    `(markdown-header-face-6 ((,class (:inherit org-level-6)))))
 
   (custom-theme-set-variables
-   'rebecca
+   'rebecca-vibe
    `(ansi-color-names-vector [(,bg3 ,bg3) (,keyword ,bg3) (,type ,bg3)
 			      (,var ,var) (,func ,func) (,builtin ,builtin)
 			      (,str ,str) (,fg2 ,fg2)])))
@@ -505,7 +505,7 @@
   (add-to-list 'custom-theme-load-path
                (file-name-as-directory (file-name-directory load-file-name))))
 
-(provide-theme 'rebecca)
+(provide-theme 'rebecca-vibe)
 
 ;; Local Variables:
 ;; no-byte-compile: t
